@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>AI助审建议</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      width: 360px;
+      height: 100%;
+      background: #f8f9fa;
+      color: #333;
+    }
+    h4 {
+      margin: 0 0 12px 0;
+      color: #1a73e8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .field {
+      margin-bottom: 12px;
+    }
+    label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 4px;
+      color: #555;
+    }
+    #ai-score {
+      font-weight: bold;
+      color: #1a73e8;
+    }
+    textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      resize: vertical;
+      min-height: 80px;
+      font-size: 14px;
+    }
+    .btn-group {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    button {
+      flex: 1;
+      padding: 6px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    #gen-btn {
+      background: #34c759;
+      color: white;
+    }
+    #apply-btn {
+      background: #4285f4;
+      color: white;
+      disabled: true;
+    }
+    .footer {
+      margin-top: 16px;
+      font-size: 12px;
+      color: #757575;
+      text-align: right;
+    }
+    .loading {
+      color: #666;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h4>🤖 AI 助审建议</h4>
+
+  <div class="field">
+    <label>分数：</label>
+    <span id="ai-score">--</span>/100
+  </div>
+
+  <div class="field">
+    <label>评语：</label>
+    <textarea id="ai-comment" disabled>点击“生成评语”按钮获取AI建议</textarea>
+  </div>
+
+  <div class="btn-group">
+    <button id="apply-btn" disabled>采纳AI建议</button>
+    <button id="gen-btn">生成评语</button>
+  </div>
+
+  <div class="footer">由通义千问驱动</div>
+
+  <script src="sidePanel.js"></script>
+</body>
+</html>

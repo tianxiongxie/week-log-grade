@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "AI周志助审助手",
+  "version": "1.1",
+  "description": "点击图标唤起AI助手，自动为校友邦周志生成评分与评语",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_title": "打开AI助审面板"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.xybsyw.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
