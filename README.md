@@ -4,7 +4,7 @@
 conda create -y -n weekLogGrade python=3.11
 
 ### 激活环境
-call conda activate weekLogGrade
+conda activate weekLogGrade
 
 ### 安装依赖
 pip install fastapi uvicorn httpx python-dotenv
