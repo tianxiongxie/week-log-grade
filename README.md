@@ -1,5 +1,13 @@
+
+
+
+
 ## 千问大模型校友邦周志批阅
 
+## 加载chrome插件
+管理扩展程序->加载未打包的扩展程序->选择week-log-grade文件夹
+
+在week-log-grade文件夹运行终端
 ### 创建环境
 conda create -y -n weekLogGrade python=3.11
 
