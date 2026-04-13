@@ -15,5 +15,5 @@ pip install fastapi uvicorn httpx python-dotenv
 set DASHSCOPE_API_KEY=your_api_key_here
 
 ### 启动应用
-python proxy.py --model qwen-plus
+python proxy.py --model qwen-plus  
 --model 可选参数，默认模型：qwen3-max-2026-01-23
